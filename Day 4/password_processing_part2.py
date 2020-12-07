@@ -51,12 +51,8 @@ def isvalid(passport, expected_fields):
         # print(f"Did not match ecl for passport {passport}")
         return False
 
-    if re.search(r"ecl:(amb|blu|brn|gry|grn|hzl|oth)", passport) is None:
-        # print(f"Did not match ecl for passport {passport}")
-        return False
-
     if re.search(r"pid:((\d){9})\b", passport) is None:
-        print(f"Did not match pid for passport {passport}")
+        # print(f"Did not match pid for passport {passport}")
         return False
 
     return True
